@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://0kmvyfnrs38u"]
+
+[ext_resource type="Script" uid="uid://b55rftgovd0b1" path="res://scene/characters/player.gd" id="1_7ajil"]
+[ext_resource type="Texture2D" uid="uid://dq35a84bbh44k" path="res://graphics/characters/Player/Ashlain.png" id="1_yu87a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ajil"]
+height = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ajil"]
+size = Vector2(18, 33)
+
+[node name="Player" type="CharacterBody2D" unique_id=1930277058]
+script = ExtResource("1_7ajil")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1577636973]
+texture = ExtResource("1_yu87a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=728976239]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_7ajil")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=1268402431]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1999841310]
+position = Vector2(20, -20.5)
+shape = SubResource("RectangleShape2D_7ajil")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=11007761]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+position_smoothing_enabled = true

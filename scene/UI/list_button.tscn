@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bles20mjs3qy2"]
+
+[ext_resource type="Script" uid="uid://l1v3nt73gxrl" path="res://scene/UI/list_button.gd" id="1_6r0ep"]
+[ext_resource type="Texture2D" uid="uid://bq6jua2gcnxfb" path="res://graphics/item sprites/potion.png" id="1_yu52r"]
+
+[node name="ListButton" type="Button" unique_id=568463380]
+custom_minimum_size = Vector2(180, 100)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_6r0ep")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1968471438]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=369246798]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_yu52r")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1263624052]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Potion"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

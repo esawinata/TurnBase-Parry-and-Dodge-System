@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://nw1ylq8402yu"]
+
+[ext_resource type="Script" uid="uid://cxgtyhj5aiw2y" path="res://scene/UI/grid_button.gd" id="1_uk54w"]
+
+[node name="GridButton" type="Button" unique_id=219020863]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "button
+"
+script = ExtResource("1_uk54w")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

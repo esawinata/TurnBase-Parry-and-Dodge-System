@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dd2c205qlcqjv"]
+
+[ext_resource type="Texture2D" uid="uid://dsqr3ljgbaqdd" path="res://graphics/characters/goblin/Goblin-left.png" id="1_pk2le"]
+[ext_resource type="Script" uid="uid://bcw7g20hkuv6a" path="res://scene/characters/goblin.gd" id="1_rive8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rive8"]
+height = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rive8"]
+size = Vector2(20, 33)
+
+[node name="Goblin" type="CharacterBody2D" unique_id=1419287872]
+script = ExtResource("1_rive8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=290458986]
+texture = ExtResource("1_pk2le")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=637972305]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_rive8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1648600225]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1986312521]
+position = Vector2(-22, 15.5)
+shape = SubResource("RectangleShape2D_rive8")

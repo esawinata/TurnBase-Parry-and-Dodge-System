@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bl1sxi4tn6kga"]
+
+[ext_resource type="Script" uid="uid://cy73tsrqro4r" path="res://scene/UI/input_menu.gd" id="1_ssjn2"]
+
+[node name="InputMenu" type="Control" unique_id=492595831]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ssjn2")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1904946175]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7
+anchor_top = 0.7
+anchor_right = 0.95
+anchor_bottom = 0.95
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=74731649]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.6
+anchor_right = 0.95
+anchor_bottom = 0.95
+follow_focus = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1897916943]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

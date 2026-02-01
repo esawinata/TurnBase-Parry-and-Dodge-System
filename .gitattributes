@@ -1,0 +1,19 @@
+# Auto detect text files
+* text=auto eol=lf
+
+# Godot scenes & resources treated as text
+*.gd text
+*.tscn text
+*.tres text
+*.cfg text
+*.shader text
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ogg binary
+*.wav binary
+*.mp3 binary
+*.glb binary
+*.fbx binary
